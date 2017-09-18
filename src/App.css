@@ -1,0 +1,271 @@
+.app {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.app-logo {
+  height: 80px;
+  padding-top: .7em;
+}
+
+.app-header {
+  background-color: #222;
+  box-sizing: border-box;
+  color: white;
+  height: 190px;
+  padding: 20px;
+  position: sticky;
+  top: -7em;
+  width: 100vw;
+  z-index: 1;
+}
+
+.loading-icon {
+  animation: App-logo-spin infinite 5s linear;
+  height: 20px;
+  margin-left: 0.25em;
+  opacity: 0.45;
+  position: relative;
+  top: 3px;
+  width: 20px;
+}
+
+.loading-status {
+  color: rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 8.75em;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.sub-header {
+  align-items: center;
+  background-color: white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+  padding: 0.5em;
+  padding-bottom: 0;
+  position: sticky;
+  top: 8.25em;
+  width: 100vw;
+  z-index: 1;
+}
+
+.app-intro {
+  background-color: white;
+  font-size: large;
+  margin: 1em;
+  margin-bottom: 0;
+  padding-bottom: 0.5em;
+  padding-top: 0.2em;
+  position: sticky;
+  top: 4.25em;
+  width: 100vw;
+  z-index: 1;
+}
+
+.source-view {
+  background-color: whitesmoke;
+  border: 1px solid rgba(175, 175, 175, 0.5);
+  border-radius: 0 0 10px 10px;
+  border-top: 0;
+  height: auto;
+  margin: 0;
+  margin-bottom: 1em;
+  max-width: 85vw;
+  overflow-x: scroll;
+  padding: 1em;
+  text-align: left;
+  white-space: pre;
+  width: auto;
+}
+
+.fade-out {
+  animation: fadeOutPersist;
+  animation-delay: 0s;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.fade-in {
+  animation: fadeInPersist;
+  animation-delay: 0s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes fadeInPersist {
+  0% {
+    opacity: 0;
+    transform: translateY(-2em);
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+@keyframes fadeOutPersist {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-2em);
+    visibility: hidden;
+  }
+}
+
+.fetch-form {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  justify-content: center;
+  padding-bottom: 1em;
+  position: sticky;
+  top: 9em;
+  width: 100vw;
+  z-index: 1;
+}
+
+.fetch-form > p {
+  color: gray;
+  margin: 0;
+  padding: 0;
+  padding-right: 2px;
+  padding-top: 0.25em;
+}
+
+.fetch-form input {
+  border-radius: 1px;
+  border-width: thin;
+}
+
+.fetch-form button {
+  box-sizing: border-box;
+  color: dimgrey;
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.fetch-form button:active {
+  background-color: lightgrey;
+  border-bottom: 0;
+  border-color: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  border-top: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+.tag-count-summary {
+  align-items: center;
+  background-color: whitesmoke;
+  border: 1px solid rgba(175, 175, 175, 0.5);
+  border-radius: 10px;
+  color: dimgrey;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: 1em;
+  max-width: 85vw;
+  padding: 1em;
+  text-align: left;
+  width: auto;
+}
+
+.tag-count-summary > p {
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+.tag-count-list {
+  align-items: center;
+  border-radius: 10px;
+  color: dimgrey;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: center;
+  margin: 0;
+  max-width: 85vw;
+  padding: 0;
+  text-align: left;
+  width: auto;
+}
+
+.tag-count-list > li {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.source-buttons {
+  background-color: whitesmoke;
+  border: 1px solid rgba(175, 175, 175, 0.5);
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 20px 20px -5px whitesmoke;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 1em;
+  position: relative;
+  width: 85vw;
+}
+
+.source-buttons > button {
+  background-color: white;
+  border: 1px solid rgba(175, 175, 175, 0.5);
+  border-radius: 5px;
+  color: dimgrey;
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: bolder;
+  margin-right: 0.5em;
+  padding: 0.5em;
+}
+
+.source-buttons > button:hover {
+  background-color: whitesmoke;
+}
+
+.sticky-button {
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.source-buttons > button:active {
+  background-color: lightgrey;
+}
+
+.tag-count-list > li > strong, .tag-count-list > li > p {
+  margin: 0;
+  padding-right: 0.5em;
+}
