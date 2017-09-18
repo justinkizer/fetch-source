@@ -12,6 +12,8 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(express.static(path.resolve('./build')));
+
 app.get('/api/fetch', (req, res) => {
   request('http://' + req.query.url, (error, response, html) => {
     if (!error) {
@@ -30,8 +32,8 @@ app.get('/api/fetch', (req, res) => {
   });
 });
 
-app.get('/', (req, res) => {
-  res.sendFile(path.resolve('./public/index.html'));
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve('./build/index.html'));
 });
 
 app.listen(port, () => console.log('Now listening on port ' + port + '...'));

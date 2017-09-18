@@ -67,7 +67,7 @@ class App extends React.Component {
       this.fade('out');
       if (document.body.scrollTop > 140) { document.body.scrollTop = 140; }
     }
-    fetch('http://localhost:8081/api/fetch?url=' + this.state.urlInput)
+    fetch('api/fetch?url=' + this.state.urlInput)
       .then(response => {
         response.json()
           .then(data => {
